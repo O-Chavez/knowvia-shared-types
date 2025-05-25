@@ -1,0 +1,25 @@
+export var subscriptionStatusEnum;
+(function (subscriptionStatusEnum) {
+    subscriptionStatusEnum["active"] = "active";
+    subscriptionStatusEnum["trialing"] = "trialing";
+    subscriptionStatusEnum["past_due"] = "past_due";
+    subscriptionStatusEnum["unpaid"] = "unpaid";
+    subscriptionStatusEnum["canceled"] = "canceled";
+    subscriptionStatusEnum["incomplete"] = "incomplete";
+    subscriptionStatusEnum["incomplete_expired"] = "incomplete_expired";
+})(subscriptionStatusEnum || (subscriptionStatusEnum = {}));
+export var packageTypeEnum;
+(function (packageTypeEnum) {
+    packageTypeEnum["standard"] = "standard";
+    packageTypeEnum["premium"] = "premium";
+    packageTypeEnum["enterprise"] = "enterprise";
+})(packageTypeEnum || (packageTypeEnum = {}));
+export var accountStatusEnum;
+(function (accountStatusEnum) {
+    accountStatusEnum["created"] = "created";
+    accountStatusEnum["payment_provided"] = "payment_provided";
+    accountStatusEnum["documents_provided"] = "documents_provided";
+    accountStatusEnum["active"] = "active";
+    accountStatusEnum["inactive"] = "inactive";
+    accountStatusEnum["deleted"] = "deleted";
+})(accountStatusEnum || (accountStatusEnum = {}));

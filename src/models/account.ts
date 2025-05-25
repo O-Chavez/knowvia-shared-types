@@ -1,0 +1,91 @@
+import { ChatCustomization } from '../styles/chatCustomization';
+import { KnowledgeBase } from './knowledgeBase';
+
+export interface AccountModel {
+  _id: string;
+  // Base account information
+  email: string;
+  password: string;
+  knowledgeBase?: KnowledgeBase;
+  created: Date;
+  accountHolderFirstName?: string;
+  accountHolderLastName?: string;
+
+  // Organization information
+  organizationName?: string;
+  organizationLocation?: string;
+  organizationSector?: string;
+  organizationDescription?: string;
+  lastLogin?: Date;
+  summary?: string;
+
+  // Usage information
+  usage?: UsagePeriod[];
+  accountStatus: accountStatusEnum;
+  package?: packageTypeEnum;
+
+  // Stripe customer information
+  stripeCustomerId?: string;
+  itemId?: string;
+  paymentHistory?: TransactionRecord[];
+  subscriptionStatus?: subscriptionStatusEnum;
+  subscriptionEnds?: Date;
+  subscriptionStarts?: Date;
+  eventHistory?: AccountEvent[];
+
+  // Chat customization
+  chatCustomization?: ChatCustomization;
+  allowedDomains?: string[];
+  devMode?: boolean;
+}
+export interface UsagePeriod {
+  startDate: Date;
+  endDate: Date;
+  apiCalls: number;
+  conversations: number;
+}
+export enum subscriptionStatusEnum {
+  active = 'active',
+  trialing = 'trialing',
+  past_due = 'past_due',
+  unpaid = 'unpaid',
+  canceled = 'canceled',
+  incomplete = 'incomplete',
+  incomplete_expired = 'incomplete_expired',
+}
+
+export enum packageTypeEnum {
+  standard = 'standard',
+  premium = 'premium',
+  enterprise = 'enterprise',
+}
+
+export enum accountStatusEnum {
+  created = 'created',
+  payment_provided = 'payment_provided',
+  documents_provided = 'documents_provided',
+  active = 'active',
+  inactive = 'inactive',
+  deleted = 'deleted',
+}
+
+export interface TransactionRecord {
+  date: Date;
+  amount: number;
+  invoiceId: string;
+  description?: string;
+  status: 'succeeded' | 'failed';
+  subscriptionId?: string;
+}
+export interface AccountEvent {
+  type: 'account_updated' | 'password_reset' | 'email_changed' | string;
+  date: Date;
+  description?: string;
+  source?: 'user' | 'admin' | 'system';
+  changes?: {
+    field: string;
+    oldValue: any;
+    newValue: any;
+  }[];
+  previousState?: Record<string, any>;
+}

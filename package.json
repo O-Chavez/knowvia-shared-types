@@ -1,0 +1,15 @@
+{
+  "name": "@knowvia/shared-types",
+  "version": "1.0.12",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "bump:patch": "npm version patch",
+    "bump:minor": "npm version minor",
+    "bump:major": "npm version major"
+  }
+}
