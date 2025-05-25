@@ -23,4 +23,5 @@ export var accountStatusEnum;
     accountStatusEnum["inactive"] = "inactive";
     accountStatusEnum["deleted"] = "deleted";
     accountStatusEnum["email_verified"] = "email_verified";
+    accountStatusEnum["payment_failed"] = "payment_failed";
 })(accountStatusEnum || (accountStatusEnum = {}));
