@@ -67,6 +67,7 @@ export enum accountStatusEnum {
   inactive = 'inactive',
   deleted = 'deleted',
   email_verified = 'email_verified',
+  payment_failed = 'payment_failed',
 }
 
 export interface TransactionRecord {
