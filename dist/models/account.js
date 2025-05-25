@@ -22,4 +22,5 @@ export var accountStatusEnum;
     accountStatusEnum["active"] = "active";
     accountStatusEnum["inactive"] = "inactive";
     accountStatusEnum["deleted"] = "deleted";
+    accountStatusEnum["email_verified"] = "email_verified";
 })(accountStatusEnum || (accountStatusEnum = {}));

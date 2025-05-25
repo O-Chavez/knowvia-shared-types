@@ -53,7 +53,8 @@ export declare enum accountStatusEnum {
     documents_provided = "documents_provided",
     active = "active",
     inactive = "inactive",
-    deleted = "deleted"
+    deleted = "deleted",
+    email_verified = "email_verified"
 }
 export interface TransactionRecord {
     date: Date;
