@@ -1,8 +1,5 @@
 /**
- * Main types of messages that can be sent and recieved over the WebSocket.
- * @param System System messages / Init messages
- * @param Chat Chat messages
- * @param Error Error messages
+ * Main types of messages that can be sent and received over the WebSocket.
  */
 export var WsMessageType;
 (function (WsMessageType) {
