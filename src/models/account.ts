@@ -2,7 +2,6 @@ import { ChatCustomization } from '../styles/chatCustomization';
 import { KnowledgeBase } from './knowledgeBase';
 
 export interface AccountModel {
-  _id: string;
   // Base account information
   email: string;
   password: string;
