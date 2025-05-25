@@ -54,3 +54,23 @@ export interface ChatConversation {
   messages: ChatMessage[];
   topic?: string;
 }
+
+export function isChatMessage(data: any): data is ChatMessage {
+  return (
+    typeof data?.message === 'string' &&
+    (data.role === 'assistant' || data.role === 'user')
+  );
+}
+
+export function isErrorMessage(data: any): data is ErrorMessage {
+  return typeof data?.errorType === 'string';
+}
+
+export function isSystemInfo(data: any): data is SystemInfo {
+  return (
+    typeof data === 'object' &&
+    (data.organizationName !== undefined ||
+      data.apiKey !== undefined ||
+      data.selectedThemeName !== undefined)
+  );
+}
