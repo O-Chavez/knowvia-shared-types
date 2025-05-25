@@ -49,3 +49,6 @@ export interface ChatConversation {
     messages: ChatMessage[];
     topic?: string;
 }
+export declare function isChatMessage(data: any): data is ChatMessage;
+export declare function isErrorMessage(data: any): data is ErrorMessage;
+export declare function isSystemInfo(data: any): data is SystemInfo;
