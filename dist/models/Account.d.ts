@@ -1,3 +1,4 @@
+import { ChatConversation } from '../events/webSocket';
 import { ChatCustomization } from '../styles/chatCustomization';
 import { KnowledgeBase } from './knowledgeBase';
 export interface AccountModel {
@@ -16,6 +17,7 @@ export interface AccountModel {
     usage?: UsagePeriod[];
     accountStatus: accountStatusEnum;
     package?: packageTypeEnum;
+    conversations: ChatConversation[];
     stripeCustomerId?: string;
     itemId?: string;
     paymentHistory?: TransactionRecord[];
