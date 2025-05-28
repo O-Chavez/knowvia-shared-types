@@ -28,6 +28,7 @@ export interface SystemInfo {
     receivedBubbleColor?: string;
   };
   initialMessage?: string;
+  devMode?: boolean;
 }
 
 /**

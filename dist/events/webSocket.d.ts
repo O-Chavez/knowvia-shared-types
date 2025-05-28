@@ -26,6 +26,7 @@ export interface SystemInfo {
         receivedBubbleColor?: string;
     };
     initialMessage?: string;
+    devMode?: boolean;
 }
 /**
  * Represents an error message that can be sent or received over the WebSocket.
