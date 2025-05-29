@@ -9,4 +9,5 @@ export interface ChatContextDocument {
     tokenCount: number;
     uploadedAt: Date;
     source?: 'upload' | 'manual' | 'url';
+    mimeType?: string;
 }
