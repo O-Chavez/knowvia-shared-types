@@ -56,6 +56,27 @@ export interface ChatConversation {
   topic?: string;
 }
 
+// @knowvia/shared-types
+
+export type LeadStatus = 'new' | 'contacted' | 'converted' | 'archived';
+
+export interface Lead {
+  accountId: string;
+  email?: string;
+  phone?: string;
+  sourceMessage: string;
+  chatConversation: {
+    date: string; // serialized for frontend
+    messages: {
+      role: 'user' | 'assistant';
+      message: string;
+    }[];
+    topic?: string;
+  };
+  capturedAt: string;
+  status: LeadStatus;
+}
+
 export function isChatMessage(data: any): data is ChatMessage {
   return (
     typeof data?.message === 'string' &&

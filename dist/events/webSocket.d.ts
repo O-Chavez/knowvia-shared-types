@@ -50,6 +50,23 @@ export interface ChatConversation {
     messages: ChatMessage[];
     topic?: string;
 }
+export type LeadStatus = 'new' | 'contacted' | 'converted' | 'archived';
+export interface Lead {
+    accountId: string;
+    email?: string;
+    phone?: string;
+    sourceMessage: string;
+    chatConversation: {
+        date: string;
+        messages: {
+            role: 'user' | 'assistant';
+            message: string;
+        }[];
+        topic?: string;
+    };
+    capturedAt: string;
+    status: LeadStatus;
+}
 export declare function isChatMessage(data: any): data is ChatMessage;
 export declare function isErrorMessage(data: any): data is ErrorMessage;
 export declare function isSystemInfo(data: any): data is SystemInfo;
