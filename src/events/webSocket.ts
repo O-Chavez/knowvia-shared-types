@@ -13,6 +13,7 @@ export enum WsMessageType {
 export interface ChatMessage {
   role: 'assistant' | 'user';
   message: string;
+  date?: Date;
 }
 
 /**

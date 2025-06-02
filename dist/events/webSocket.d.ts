@@ -12,6 +12,7 @@ export declare enum WsMessageType {
 export interface ChatMessage {
     role: 'assistant' | 'user';
     message: string;
+    date?: Date;
 }
 /**
  * Represents system-level data shared when a WebSocket connection is established.
