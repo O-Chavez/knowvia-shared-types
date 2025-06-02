@@ -55,18 +55,14 @@ export interface Lead {
     accountId: string;
     email?: string;
     phone?: string;
+    name?: string;
     sourceMessage: string;
-    chatConversation: {
-        date: string;
-        messages: {
-            role: 'user' | 'assistant';
-            message: string;
-        }[];
-        topic?: string;
-    };
+    chatConversation: ChatConversation;
     capturedAt: string;
     status: LeadStatus;
+    leadTemperature?: LeadTemperature;
 }
+export type LeadTemperature = 'hot' | 'warm' | 'cold';
 export declare function isChatMessage(data: any): data is ChatMessage;
 export declare function isErrorMessage(data: any): data is ErrorMessage;
 export declare function isSystemInfo(data: any): data is SystemInfo;

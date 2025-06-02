@@ -56,26 +56,21 @@ export interface ChatConversation {
   topic?: string;
 }
 
-// @knowvia/shared-types
-
 export type LeadStatus = 'new' | 'contacted' | 'converted' | 'archived';
 
 export interface Lead {
   accountId: string;
   email?: string;
   phone?: string;
+  name?: string;
   sourceMessage: string;
-  chatConversation: {
-    date: string; // serialized for frontend
-    messages: {
-      role: 'user' | 'assistant';
-      message: string;
-    }[];
-    topic?: string;
-  };
+  chatConversation: ChatConversation;
   capturedAt: string;
   status: LeadStatus;
+  leadTemperature?: LeadTemperature;
 }
+
+export type LeadTemperature = 'hot' | 'warm' | 'cold';
 
 export function isChatMessage(data: any): data is ChatMessage {
   return (
