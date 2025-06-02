@@ -2,6 +2,7 @@ import { ChatConversation } from '../events/webSocket';
 import { ChatCustomization } from '../styles/chatCustomization';
 import { KnowledgeBase } from './knowledgeBase';
 export interface AccountModel {
+    _id?: string;
     email: string;
     password: string;
     knowledgeBase?: KnowledgeBase;
