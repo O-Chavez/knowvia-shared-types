@@ -51,6 +51,7 @@ export interface WsMessage {
  * Represents a conversation that occurred over the chat system.
  */
 export interface ChatConversation {
+  _id: string;
   date: Date;
   messages: ChatMessage[];
   topic?: string;
@@ -69,6 +70,7 @@ export enum LeadStatus {
   Archived = 'archived',
 }
 export interface Lead {
+  _id: string;
   accountId: string;
   email?: string;
   phone?: string;
