@@ -50,12 +50,16 @@ export interface ChatConversation {
     messages: ChatMessage[];
     topic?: string;
 }
+export declare enum LeadTemperature {
+    Hot = "hot",
+    Warm = "warm",
+    Cold = "cold"
+}
 export declare enum LeadStatus {
-    new = "new",
-    contacted = "contacted",
-    qualified = "qualified",
-    converted = "converted",
-    archived = "archived"
+    New = "new",
+    Contacted = "contacted",
+    Converted = "converted",
+    Archived = "archived"
 }
 export interface Lead {
     accountId: string;
@@ -67,11 +71,6 @@ export interface Lead {
     capturedAt: string;
     status: LeadStatus;
     leadTemperature?: LeadTemperature;
-}
-export declare enum LeadTemperature {
-    cold = "cold",
-    warm = "warm",
-    hot = "hot"
 }
 export declare function isChatMessage(data: any): data is ChatMessage;
 export declare function isErrorMessage(data: any): data is ErrorMessage;
