@@ -93,7 +93,7 @@ export const CHAT_THEMES: ChatTheme[] = [
     receivedBubbleColor: '#e9d5ff',
     sentTextColor: '#ffffff',
     receivedTextColor: '#1f2937',
-    textInputColor: '#000000',
+    textInputColor: '#e9d5ff',
     sendButtonColor: '#8b5cf6',
     borderRadius: '1.5rem',
   },
