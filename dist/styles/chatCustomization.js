@@ -70,7 +70,7 @@ export const CHAT_THEMES = [
         receivedBubbleColor: '#e9d5ff',
         sentTextColor: '#ffffff',
         receivedTextColor: '#1f2937',
-        textInputColor: '#ffffff',
+        textInputColor: '#000000',
         sendButtonColor: '#8b5cf6',
         borderRadius: '1.5rem',
     },
