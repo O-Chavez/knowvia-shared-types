@@ -81,6 +81,7 @@ export interface Lead {
   capturedAt: string;
   status: LeadStatus;
   leadTemperature?: LeadTemperature;
+  summary?: string;
 }
 
 export function isChatMessage(data: any): data is ChatMessage {
