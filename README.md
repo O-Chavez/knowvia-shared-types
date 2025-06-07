@@ -72,7 +72,7 @@ npm run build
 2. **Bump the version:**
 
 ```bash
-npm run bump:patch && npm publish --access **public**
+npm run bump:patch && npm publish --access public
 ```
 
 4. **In your consuming project, update the dependency:**
