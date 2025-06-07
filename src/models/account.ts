@@ -5,6 +5,7 @@ import { KnowledgeBase } from './knowledgeBase';
 export interface AccountModel {
   // Base account information
   _id?: string;
+  googleId?: string;
   email: string;
   password: string;
   knowledgeBase?: KnowledgeBase;

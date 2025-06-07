@@ -3,6 +3,7 @@ import { ChatCustomization } from '../styles/chatCustomization';
 import { KnowledgeBase } from './knowledgeBase';
 export interface AccountModel {
     _id?: string;
+    googleId?: string;
     email: string;
     password: string;
     knowledgeBase?: KnowledgeBase;
