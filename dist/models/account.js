@@ -14,6 +14,11 @@ export var packageTypeEnum;
     packageTypeEnum["premium"] = "premium";
     packageTypeEnum["enterprise"] = "enterprise";
 })(packageTypeEnum || (packageTypeEnum = {}));
+export var billingCycleEnum;
+(function (billingCycleEnum) {
+    billingCycleEnum["monthly"] = "monthly";
+    billingCycleEnum["yearly"] = "annual";
+})(billingCycleEnum || (billingCycleEnum = {}));
 export var accountStatusEnum;
 (function (accountStatusEnum) {
     accountStatusEnum["created"] = "created";

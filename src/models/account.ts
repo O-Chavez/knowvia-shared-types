@@ -25,6 +25,7 @@ export interface AccountModel {
   usage?: UsagePeriod[];
   accountStatus: accountStatusEnum;
   package?: packageTypeEnum;
+  billingCycle: billingCycleEnum;
   conversations: ChatConversation[];
 
   // Stripe customer information
@@ -61,6 +62,11 @@ export enum packageTypeEnum {
   standard = 'standard',
   premium = 'premium',
   enterprise = 'enterprise',
+}
+
+export enum billingCycleEnum {
+  monthly = 'monthly',
+  yearly = 'annual',
 }
 
 export enum accountStatusEnum {

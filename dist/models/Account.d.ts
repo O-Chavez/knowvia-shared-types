@@ -19,6 +19,7 @@ export interface AccountModel {
     usage?: UsagePeriod[];
     accountStatus: accountStatusEnum;
     package?: packageTypeEnum;
+    billingCycle: billingCycleEnum;
     conversations: ChatConversation[];
     stripeCustomerId?: string;
     itemId?: string;
@@ -50,6 +51,10 @@ export declare enum packageTypeEnum {
     standard = "standard",
     premium = "premium",
     enterprise = "enterprise"
+}
+export declare enum billingCycleEnum {
+    monthly = "monthly",
+    yearly = "annual"
 }
 export declare enum accountStatusEnum {
     created = "created",
