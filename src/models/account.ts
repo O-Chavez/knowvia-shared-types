@@ -89,7 +89,23 @@ export interface TransactionRecord {
   subscriptionId?: string;
 }
 export interface AccountEvent {
-  type: 'account_updated' | 'password_reset' | 'email_changed' | string;
+  type:
+    | 'account_updated'
+    | 'password_reset'
+    | 'email_changed'
+    | 'subscription_created'
+    | 'subscription_updated'
+    | 'subscription_canceled'
+    | 'subscription_renewed'
+    | 'subscription_paused'
+    | 'subscription_resumed'
+    | 'payment_succeeded'
+    | 'payment_failed'
+    | 'invoice_created'
+    | 'invoice_updated'
+    | 'invoice_paid'
+    | 'invoice_failed'
+    | string;
   date: Date;
   description?: string;
   source?: 'user' | 'admin' | 'system';
