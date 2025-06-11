@@ -10,8 +10,9 @@ export var subscriptionStatusEnum;
 })(subscriptionStatusEnum || (subscriptionStatusEnum = {}));
 export var packageTypeEnum;
 (function (packageTypeEnum) {
-    packageTypeEnum["standard"] = "standard";
-    packageTypeEnum["premium"] = "premium";
+    packageTypeEnum["starter"] = "starter";
+    packageTypeEnum["growth"] = "growth";
+    packageTypeEnum["pro"] = "pro";
     packageTypeEnum["enterprise"] = "enterprise";
 })(packageTypeEnum || (packageTypeEnum = {}));
 export var billingCycleEnum;

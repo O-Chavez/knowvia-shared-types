@@ -59,8 +59,9 @@ export enum subscriptionStatusEnum {
 }
 
 export enum packageTypeEnum {
-  standard = 'standard',
-  premium = 'premium',
+  starter = 'starter',
+  growth = 'growth',
+  pro = 'pro',
   enterprise = 'enterprise',
 }
 
