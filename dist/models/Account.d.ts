@@ -73,6 +73,7 @@ export interface TransactionRecord {
     description?: string;
     status: 'succeeded' | 'failed';
     subscriptionId?: string;
+    taxAmount?: number;
 }
 export interface AccountEvent {
     type: 'account_updated' | 'password_reset' | 'email_changed' | 'subscription_created' | 'subscription_updated' | 'subscription_canceled' | 'subscription_renewed' | 'subscription_paused' | 'subscription_resumed' | 'payment_succeeded' | 'payment_failed' | 'invoice_created' | 'invoice_updated' | 'invoice_paid' | 'invoice_failed' | string;

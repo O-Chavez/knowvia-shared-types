@@ -87,6 +87,7 @@ export interface TransactionRecord {
   description?: string;
   status: 'succeeded' | 'failed';
   subscriptionId?: string;
+  taxAmount?: number;
 }
 export interface AccountEvent {
   type:
