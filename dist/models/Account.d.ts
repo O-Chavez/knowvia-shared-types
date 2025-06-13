@@ -1,6 +1,6 @@
-import { ChatConversation } from '../events/webSocket';
-import { ChatCustomization } from '../styles/chatCustomization';
-import { KnowledgeBase } from './knowledgeBase';
+import { ChatConversation } from '../events/webSocket.js';
+import { ChatCustomization } from '../styles/chatCustomization.js';
+import { KnowledgeBase } from './knowledgeBase.js';
 export interface AccountModel {
     _id?: string;
     googleId?: string;

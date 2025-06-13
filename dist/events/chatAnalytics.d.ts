@@ -1,5 +1,5 @@
-import { UsagePeriod } from '../models/account';
-import { ChatConversation } from './webSocket';
+import { UsagePeriod } from '../models/account.js';
+import { ChatConversation } from './webSocket.js';
 export declare const __noop = true;
 export interface ChatAnalytics {
     usage: UsagePeriod;
