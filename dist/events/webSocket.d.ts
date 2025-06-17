@@ -4,6 +4,7 @@
 export declare enum WsMessageType {
     System = "system",
     Chat = "chat",
+    Ping = "ping",
     Error = "error"
 }
 /**
