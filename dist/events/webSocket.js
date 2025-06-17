@@ -6,6 +6,7 @@ export var WsMessageType;
     WsMessageType["System"] = "system";
     WsMessageType["Chat"] = "chat";
     WsMessageType["Ping"] = "ping";
+    WsMessageType["Pong"] = "pong";
     WsMessageType["Error"] = "error";
 })(WsMessageType || (WsMessageType = {}));
 export var LeadTemperature;
