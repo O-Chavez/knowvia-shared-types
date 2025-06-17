@@ -42,7 +42,7 @@ export interface ErrorMessage {
  */
 export interface WsMessage {
     type: WsMessageType;
-    data: ChatMessage | SystemInfo | ErrorMessage;
+    data: ChatMessage | SystemInfo | ErrorMessage | null;
 }
 /**
  * Represents a conversation that occurred over the chat system.
