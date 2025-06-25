@@ -10,7 +10,7 @@ export interface AccountModel {
     created: Date;
     accountHolderFirstName?: string;
     accountHolderLastName?: string;
-    authProvider: AuthProvider;
+    authProvider: authProviderEnum;
     organizationName?: string;
     organizationLocation?: string;
     organizationSector?: string;
@@ -33,7 +33,7 @@ export interface AccountModel {
     allowedDomains?: string[];
     devMode?: boolean;
 }
-export declare enum AuthProvider {
+export declare enum authProviderEnum {
     google = "google",
     local = "local"
 }

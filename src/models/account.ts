@@ -12,7 +12,7 @@ export interface AccountModel {
   created: Date;
   accountHolderFirstName?: string;
   accountHolderLastName?: string;
-  authProvider: AuthProvider;
+  authProvider: authProviderEnum;
 
   // Organization information
   organizationName?: string;
@@ -44,7 +44,7 @@ export interface AccountModel {
   devMode?: boolean;
 }
 
-export enum AuthProvider {
+export enum authProviderEnum {
   google = 'google',
   local = 'local',
 }

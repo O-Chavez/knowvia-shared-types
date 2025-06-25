@@ -1,8 +1,8 @@
-export var AuthProvider;
-(function (AuthProvider) {
-    AuthProvider["google"] = "google";
-    AuthProvider["local"] = "local";
-})(AuthProvider || (AuthProvider = {}));
+export var authProviderEnum;
+(function (authProviderEnum) {
+    authProviderEnum["google"] = "google";
+    authProviderEnum["local"] = "local";
+})(authProviderEnum || (authProviderEnum = {}));
 export var subscriptionStatusEnum;
 (function (subscriptionStatusEnum) {
     subscriptionStatusEnum["active"] = "active";
