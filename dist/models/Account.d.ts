@@ -10,6 +10,7 @@ export interface AccountModel {
     created: Date;
     accountHolderFirstName?: string;
     accountHolderLastName?: string;
+    authProvider: AuthProvider;
     organizationName?: string;
     organizationLocation?: string;
     organizationSector?: string;
@@ -31,6 +32,10 @@ export interface AccountModel {
     chatCustomization?: ChatCustomization;
     allowedDomains?: string[];
     devMode?: boolean;
+}
+export declare enum AuthProvider {
+    google = "google",
+    local = "local"
 }
 export interface UsagePeriod {
     startDate: Date;

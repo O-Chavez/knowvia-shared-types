@@ -12,6 +12,7 @@ export interface AccountModel {
   created: Date;
   accountHolderFirstName?: string;
   accountHolderLastName?: string;
+  authProvider: AuthProvider;
 
   // Organization information
   organizationName?: string;
@@ -42,6 +43,12 @@ export interface AccountModel {
   allowedDomains?: string[];
   devMode?: boolean;
 }
+
+export enum AuthProvider {
+  google = 'google',
+  local = 'local',
+}
+
 export interface UsagePeriod {
   startDate: Date;
   endDate: Date;
